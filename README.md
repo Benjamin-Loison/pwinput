@@ -17,19 +17,21 @@ The `getpass.getpass()` function in the Python Standard Library won't display "m
 
 Typical usage:
 
-    >>> import pwinput
-    >>> pwinput.pwinput()  # Show * for each typed character.
-    Password: *********
-    'swordfish'
-    >>> pwinput.pwinput(prompt='PW: ')  # Show a custom prompt.
-    PW: *********
-    'swordfish'
-    >>> pwinput.pwinput(mask='X')  # Show a different character when user types.
-    Password: XXXXXXXXX
-    'swordfish'
-    >>> pwinput.pwinput(mask='') # Don't show anything when user types (falls back and calls getpass.getpass()).
-    Password:
-    'swordfish'
+```py
+>>> import pwinput
+>>> pwinput.pwinput()  # Show * for each typed character.
+Password: *********
+'swordfish'
+>>> pwinput.pwinput(prompt='PW: ')  # Show a custom prompt.
+PW: *********
+'swordfish'
+>>> pwinput.pwinput(mask='X')  # Show a different character when user types.
+Password: XXXXXXXXX
+'swordfish'
+>>> pwinput.pwinput(mask='') # Don't show anything when user types (falls back and calls getpass.getpass()).
+Password:
+'swordfish'
+```
 
 Contribute
 ----------
